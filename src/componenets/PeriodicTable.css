@@ -1,0 +1,550 @@
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
+
+.periodicTable {
+    display: grid;
+    grid-template-columns: repeat(18, auto);
+    grid-template-rows:repeat(10, auto);
+    column-gap: 1px;
+    row-gap: 1px;
+    justify-content: center;
+    margin-top: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    
+}
+
+.nobleGas, .lanthanide, .nonMetal, .alkaliMetal, .alkalineEarthMetal, .metalloid, .halogen, .transitionMetal, .postTransitionMetal, .actinide {
+    margin: 2px;
+    width: 60px;
+    max-width: 65px;
+    min-width: 55px;
+    height: auto;
+    position: relative
+    
+}
+
+.nonMetal {
+    background-color: #522D6D;
+    color: #fff;
+    transition: .2s;
+  }
+  
+.nonMetal:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #522D6D 0%, rgb(129, 52, 148) 50%, #522D6D 100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    
+}
+  
+
+.nobleGas {
+    color: #fff;
+    background-color: #693DE2;
+    transition: .2s;
+}
+
+.nobleGas:hover{
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #693DE2 0%, #7c56e3 50%, #693DE2 100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.alkaliMetal {
+    color: #fff;
+    background-color: #0ABCDE;
+    transition: .2s;
+}
+.alkaliMetal:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #0ABCDE 0%, #40cce8 50%, #0ABCDE 100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.alkalineEarthMetal {
+   color: #fff;
+   background-color: #00548B;
+   transition: .2s;
+}
+
+.alkalineEarthMetal:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #00548B 0%, #3a84b5 50%, #00548B 100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.metalloid {
+    color: #fff;
+    background-color: #AD1E2D;
+    transition: .2s;
+}
+.metalloid:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #AD1E2D 0%, #b83643 50%, #AD1E2D 100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+}
+
+.postTransitionMetal {
+    color: #fff;
+    background-color: #ED7700;
+    transition: .2s;
+}
+.postTransitionMetal:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #ED7700 0%, #da9046 50%, #ED7700 100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.halogen {
+    color: #fff;
+    background-color: #7474C1;
+    transition: .2s;
+}
+.halogen:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #7474C1 0%, #8686c2 50%, #7474C1 100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.transitionMetal {
+    color: #fff;
+    background-color: #626363;
+    transition: .2s;
+}
+.transitionMetal:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #626363  0%, #a4a5a5 50%, #626363  100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.lanthanide {
+    color: #fff;
+    background-color: #005DAA;
+    transition: .2s;
+}
+
+.lanthanide:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #005DAA  0%, #286598 50%, #005DAA   100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.actinide {
+    color: #fff;
+    background-color: #32D801;
+    transition: .2s;
+}
+
+.actinide:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #32D801   0%, #77ca5d 50%, #32D801   100%);
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
+        border: none;
+
+}
+
+/* Formatting the element number value */
+.elementNumber {
+    font-family:  'Courier New', Courier, monospace;
+    font-size: 10px;
+    font-weight:bold;
+    padding-top: 2px;
+    padding-left: 4px;
+}
+
+/* Formatting the element symbol - making the text relative to the screen width, so it stays large enough to read but doesnt distort the blocks */
+.elementSymbol {
+    font-family: 'Comfortaa', cursive, 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+/* Formatting the element name */
+.elementName {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .55rem;
+    letter-spacing: .2px;
+    padding-bottom: 3px;
+    padding-left: 1px;
+    font-weight: 100;
+    overflow: hidden;
+}
+
+/* adding the blank space on the top row of the table using a blank div */
+.blankRow1 {
+    grid-column: 2/span 16;
+    grid-row: 1;
+}
+
+/* adding the blank space on the second row of the table using a blank div */
+.blankRow2 {
+    grid-column: 3/span 10;
+    grid-row: 2/span 2;
+}
+
+/* adding the blank space in the 3rd column, spanning 6th and 7th rows using a blank div */
+.blankRow3 {
+    grid-column: 3;
+    grid-row: 6/span 2;
+}
+
+/* adding the blank row in row 8 of the table to give the space between row 7 and 9 */
+.blankRow4 {
+    grid-column: 1/span 18;
+    grid-row: 8;
+    margin: 6px;
+}
+
+
+/* Adding the space at the bottom left of the table */
+.blankRow5 {
+    grid-column: 1/span 3;
+    grid-row:9/span 2;
+}
+
+
+@media (max-width: 767px) {
+
+    body {
+        margin: 0;
+        min-width: 340px;
+    }
+
+    .periodicTable {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        padding-top: 0;
+    }
+
+
+    .nobleGas,
+    .lanthanide,
+    .nonMetal,
+    .alkaliMetal,
+    .alkalineEarthMetal,
+    .metalloid,
+    .halogen,
+    .transitionMetal,
+    .postTransitionMetal,
+    .actinide {
+        width: 100%;
+        max-width: none;
+        min-width: none;
+        min-height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .nobleGas:hover,
+    .lanthanide:hover,
+    .nonMetal:hover,
+    .alkaliMetal:hover,
+    .alkalineEarthMetal:hover,
+    .metalloid:hover,
+    .halogen:hover,
+    .transitionMetal:hover,
+    .postTransitionMetal:hover,
+    .actinide:hover {
+        transform: scale(1.01);
+        border: 2px solid rgba(255, 255, 255, 0);
+    }
+
+    .blankRow1,
+    .blankRow2,
+    .blankRow3,
+    .blankRow4,
+    .blankRow5 {
+        display: none;
+    }
+
+    .elementTile {
+        display: flex;
+        align-items: center;
+
+    }
+    .elementNumber {
+        width: 10%;
+        text-align: center;
+        font-size: 1.2rem;
+        
+      }
+      
+      .elementSymbol {
+        width: 10%;
+        text-align: center;
+        font-size: 1.8rem;
+
+
+      }
+      
+      .elementName {
+        width: 70%;
+        padding-left: 5%;
+        font-size: 1.3rem;
+        transform: translateY(15%);
+        letter-spacing: 2px;
+
+      }
+
+}
+
+.modalContainer {
+    display: none;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(190, 190, 190, 0.835);
+
+}
+
+.modal {
+    color: white;
+    padding-right: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    max-width: 700px;
+    height: 420px;
+    
+    margin: auto;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: rgb(5, 5, 5);
+}
+
+
+
+.modal .infoSection {
+    max-height: 60%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    overflow-y: auto;
+    height: 75%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    word-spacing: 2px;
+    padding-right: 5px;
+    padding-left:5px ;
+  }
+
+.modal .infoSection::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .modal .infoSection::-webkit-scrollbar-track {
+    background-color: rgb(235, 235, 235);
+  }
+  
+  .modal .infoSection::-webkit-scrollbar-thumb {
+    background-color: rgb(150, 150, 150);
+    border-radius: 5px;
+    transition: .2s;
+
+  }
+  
+  .modal::-webkit-scrollbar-thumb:hover {
+    transition: .2s;
+    background-color: rgb(120, 120, 120);
+  }
+.modalHeadingContainer{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+  
+  .modalElementSymbol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    width: 75px;
+    height: 60px;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 5px solid white;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    font-family: 'Comfortaa', cursive, 'Courier New', Courier, monospace;
+
+  }
+
+  .modalHeading{
+    width: 75%;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding-bottom:10px;
+    padding-left: 30px;
+    border-bottom: 5px solid white;
+    transform: translateX(-15px);
+    font-family: 'Comfortaa', cursive, 'Courier New', Courier, monospace;
+  }
+
+  .modalLabel{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .modalInfo {
+    color: rgb(190, 190, 190);
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-left: 10px;
+
+  }
+
+  .elementHistory,
+  .elementFacts{
+    margin-top: 5px;
+    padding-right: 10px;
+  }
+
+  .modalButton{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    width: 150px;
+    padding: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: .2s;
+  }
+  .modalButton:hover{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+  }
+
+  .modalButton:active{
+    background-color: rgb(225, 225, 225);
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(254, 39, 20);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.closeButton:hover{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+}
+
+.closeButton:active{
+    background-color: rgb(237, 35, 17);
+    box-shadow: 0 0 5px rgba(115, 115, 115, 0.9);
+
+}
+
+
+@media (max-width: 767px) {
+  .modal {
+    width: 70%;
+    max-width: none;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(5, 5, 5);
+  }
+
+   .modalFactLabel{
+margin-top: 20px;
+  }
+
+  .modalInfo {
+    color: rgb(190, 190, 190);
+    font-size: .95rem;
+    font-weight: 100;
+    margin-left: 6px;
+
+  }
+
+  .elementFacts,
+  .elementHistory {
+    margin-left: 0;
+  }
+
+  .modalButton {
+    display: flex;
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
+    width: 180px;
+    padding: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s;
+  }
+
+  .previousButton{
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  .closeButton {
+    top: 25px;
+    right: 25px;
+}
+  
+}

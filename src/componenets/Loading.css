@@ -1,0 +1,889 @@
+@import "tailwindcss";
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.loader-wrap {
+    background: #1b1b1b;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* Not absolute */
+}
+
+
+.periodic-table {
+    width: 30%;
+    max-width: 80%;
+    height: 25%;
+    max-height: 50%;
+    background-color: transparent;
+    position: relative;
+}
+
+.element {
+    width: 5.882%;
+    height: 11.765%;
+    background-color: rgb(47, 85, 125);
+    opacity: 0.21;
+    position: absolute;
+    transform-origin: 0 0;
+    z-index: 4;
+    scale: 0.85;
+}
+
+@media(min-width: 767px) and (max-width:1100px) {
+    .periodic-table {
+        width: 425px;
+        max-width: 425px;
+        height: 212px;
+        max-height: 212px;
+    }
+}
+
+@media(max-width: 767px) {
+    .periodic-table {
+        width: 212px;
+        max-width: 212px;
+        height: 106px;
+        max-height: 106px;
+    }
+}
+
+.element1 {
+    top: 0.0%;
+    left: 0.0%;
+}
+
+.element2 {
+    top: 0.0%;
+    left: 100.0%;
+}
+
+.element3 {
+    top: 11.767%;
+    left: 0.0%;
+}
+
+.element4 {
+    top: 11.767%;
+    left: 5.882%;
+}
+
+.element5 {
+    top: 11.767%;
+    left: 70.588%;
+}
+
+.element6 {
+    top: 11.767%;
+    left: 76.471%;
+}
+
+.element7 {
+    top: 11.767%;
+    left: 82.353%;
+}
+
+.element8 {
+    top: 11.767%;
+    left: 88.235%;
+}
+
+.element9 {
+    top: 11.767%;
+    left: 94.118%;
+}
+
+.element10 {
+    top: 11.767%;
+    left: 100.0%;
+}
+
+.element11 {
+    top: 23.529%;
+    left: 0.0%;
+}
+
+.element12 {
+    top: 23.529%;
+    left: 5.882%;
+}
+
+.element13 {
+    top: 23.529%;
+    left: 70.588%;
+}
+
+.element14 {
+    top: 23.529%;
+    left: 76.471%;
+}
+
+.element15 {
+    top: 23.529%;
+    left: 82.353%;
+}
+
+.element16 {
+    top: 23.529%;
+    left: 88.235%;
+}
+
+.element17 {
+    top: 23.529%;
+    left: 94.118%;
+}
+
+.element18 {
+    top: 23.529%;
+    left: 100.0%;
+}
+
+.element19 {
+    top: 35.294%;
+    left: 0.0%;
+}
+
+.element20 {
+    top: 35.294%;
+    left: 5.882%;
+}
+
+.element21 {
+    top: 35.294%;
+    left: 11.765%;
+}
+
+.element22 {
+    top: 35.294%;
+    left: 17.647%;
+}
+
+.element23 {
+    top: 35.294%;
+    left: 23.529%;
+}
+
+.element24 {
+    top: 35.294%;
+    left: 29.412%;
+}
+
+.element25 {
+    top: 35.294%;
+    left: 35.294%;
+}
+
+.element26 {
+    top: 35.294%;
+    left: 41.176%;
+}
+
+.element27 {
+    top: 35.294%;
+    left: 47.059%;
+}
+
+.element28 {
+    top: 35.294%;
+    left: 52.941%;
+}
+
+.element29 {
+    top: 35.294%;
+    left: 58.824%;
+}
+
+.element30 {
+    top: 35.294%;
+    left: 64.709%;
+}
+
+.element31 {
+    top: 35.294%;
+    left: 70.588%;
+}
+
+.element32 {
+    top: 35.294%;
+    left: 76.471%;
+}
+
+.element33 {
+    top: 35.294%;
+    left: 82.353%;
+}
+
+.element34 {
+    top: 35.294%;
+    left: 88.235%;
+}
+
+.element35 {
+    top: 35.294%;
+    left: 94.118%;
+}
+
+.element36 {
+    top: 35.294%;
+    left: 100.0%;
+}
+
+.element37 {
+    top: 47.059%;
+    left: 0.0%;
+}
+
+.element38 {
+    top: 47.059%;
+    left: 5.882%;
+}
+
+.element39 {
+    top: 47.059%;
+    left: 11.765%;
+}
+
+.element40 {
+    top: 47.059%;
+    left: 17.647%;
+}
+
+.element41 {
+    top: 47.059%;
+    left: 23.529%;
+}
+
+.element42 {
+    top: 47.059%;
+    left: 29.412%;
+}
+
+.element43 {
+    top: 47.059%;
+    left: 35.294%;
+}
+
+.element44 {
+    top: 47.059%;
+    left: 41.176%;
+}
+
+.element45 {
+    top: 47.059%;
+    left: 47.059%;
+}
+
+.element46 {
+    top: 47.059%;
+    left: 52.941%;
+}
+
+.element47 {
+    top: 47.059%;
+    left: 58.824%;
+}
+
+.element48 {
+    top: 47.059%;
+    left: 64.709%;
+}
+
+.element49 {
+    top: 47.059%;
+    left: 70.588%;
+}
+
+.element50 {
+    top: 47.059%;
+    left: 76.471%;
+}
+
+.element51 {
+    top: 47.059%;
+    left: 82.353%;
+}
+
+.element52 {
+    top: 47.059%;
+    left: 88.235%;
+}
+
+.element53 {
+    top: 47.059%;
+    left: 94.118%;
+}
+
+.element54 {
+    top: 47.059%;
+    left: 100.0%;
+}
+
+.element55 {
+    top: 58.824%;
+    left: 0.0%;
+}
+
+.element56 {
+    top: 58.824%;
+    left: 5.882%;
+}
+
+.element57 {
+    top: 88.235%;
+    left: 11.765%;
+}
+
+.element58 {
+    top: 88.235%;
+    left: 17.647%;
+}
+
+.element59 {
+    top: 88.235%;
+    left: 23.529%;
+}
+
+.element60 {
+    top: 88.235%;
+    left: 29.412%;
+}
+
+.element61 {
+    top: 88.235%;
+    left: 35.294%;
+}
+
+.element62 {
+    top: 88.235%;
+    left: 41.176%;
+}
+
+.element63 {
+    top: 88.235%;
+    left: 47.059%;
+}
+
+.element64 {
+    top: 88.235%;
+    left: 52.941%;
+}
+
+.element65 {
+    top: 88.235%;
+    left: 58.824%;
+}
+
+.element66 {
+    top: 88.235%;
+    left: 64.709%;
+}
+
+.element67 {
+    top: 88.235%;
+    left: 70.588%;
+}
+
+.element68 {
+    top: 88.235%;
+    left: 76.471%;
+}
+
+.element69 {
+    top: 88.235%;
+    left: 82.353%;
+}
+
+.element70 {
+    top: 88.235%;
+    left: 88.235%;
+}
+
+.element71 {
+    top: 88.235%;
+    left: 94.118%;
+}
+
+.element72 {
+    top: 58.824%;
+    left: 17.647%;
+}
+
+.element73 {
+    top: 58.824%;
+    left: 23.529%;
+}
+
+.element74 {
+    top: 58.824%;
+    left: 29.412%;
+}
+
+.element75 {
+    top: 58.824%;
+    left: 35.294%;
+}
+
+.element76 {
+    top: 58.824%;
+    left: 41.176%;
+}
+
+.element77 {
+    top: 58.824%;
+    left: 47.059%;
+}
+
+.element78 {
+    top: 58.824%;
+    left: 52.941%;
+}
+
+.element79 {
+    top: 58.824%;
+    left: 58.824%;
+}
+
+.element80 {
+    top: 58.824%;
+    left: 64.709%;
+}
+
+.element81 {
+    top: 58.824%;
+    left: 70.588%;
+}
+
+.element82 {
+    top: 58.824%;
+    left: 76.471%;
+}
+
+.element83 {
+    top: 58.824%;
+    left: 82.353%;
+}
+
+.element84 {
+    top: 58.824%;
+    left: 88.235%;
+}
+
+.element85 {
+    top: 58.824%;
+    left: 94.118%;
+}
+
+.element86 {
+    top: 58.824%;
+    left: 100.0%;
+}
+
+.element87 {
+    top: 70.588%;
+    left: 0.0%;
+}
+
+.element88 {
+    top: 70.588%;
+    left: 5.882%;
+}
+
+.element89 {
+    top: 100.0%;
+    left: 11.765%;
+}
+
+.element90 {
+    top: 100.0%;
+    left: 17.647%;
+}
+
+.element91 {
+    top: 100.0%;
+    left: 23.529%;
+}
+
+.element92 {
+    top: 100.0%;
+    left: 29.412%;
+}
+
+.element93 {
+    top: 100.0%;
+    left: 35.294%;
+}
+
+.element94 {
+    top: 100.0%;
+    left: 41.176%;
+}
+
+.element95 {
+    top: 100.0%;
+    left: 47.059%;
+}
+
+.element96 {
+    top: 100.0%;
+    left: 52.941%;
+}
+
+.element97 {
+    top: 100.0%;
+    left: 58.824%;
+}
+
+.element98 {
+    top: 100.0%;
+    left: 64.709%;
+}
+
+.element99 {
+    top: 100.0%;
+    left: 70.588%;
+}
+
+.element100 {
+    top: 100.0%;
+    left: 76.471%;
+}
+
+.element101 {
+    top: 100.0%;
+    left: 82.353%;
+}
+
+.element102 {
+    top: 100.0%;
+    left: 88.235%;
+}
+
+.element103 {
+    top: 100.0%;
+    left: 94.118%;
+}
+
+.element104 {
+    top: 70.588%;
+    left: 17.647%;
+}
+
+.element105 {
+    top: 70.588%;
+    left: 23.529%;
+}
+
+.element106 {
+    top: 70.588%;
+    left: 29.412%;
+}
+
+.element107 {
+    top: 70.588%;
+    left: 35.294%;
+}
+
+.element108 {
+    top: 70.588%;
+    left: 41.176%;
+}
+
+.element109 {
+    top: 70.588%;
+    left: 47.059%;
+}
+
+.element110 {
+    top: 70.588%;
+    left: 52.941%;
+}
+
+.element111 {
+    top: 70.588%;
+    left: 58.824%;
+}
+
+.element112 {
+    top: 70.588%;
+    left: 64.709%;
+}
+
+.element113 {
+    top: 70.588%;
+    left: 70.588%;
+}
+
+.element114 {
+    top: 70.588%;
+    left: 76.471%;
+}
+
+.element115 {
+    top: 70.588%;
+    left: 82.353%;
+}
+
+.element116 {
+    top: 70.588%;
+    left: 88.235%;
+}
+
+.element117 {
+    top: 70.588%;
+    left: 94.118%;
+}
+
+.element118 {
+    top: 70.588%;
+    left: 100.0%;
+}
+
+#loader {
+    width: 100px; /* This is set via HTML attribute too */
+    height: 59px;
+}
+
+#loader-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+    width: 250px;
+    position: absolute;
+    /* bottom: calc(100%); */
+    max-width: 220px;
+    top: 73%;
+    left: 55%;
+    transform: translate(-50%, -50%); 
+}
+
+#loader path:nth-child(2) {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 600;
+    animation: strokeAnimate 2s 0s ease forwards;
+}
+
+#loader path:nth-child(3) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: strokeAnimate 2s 0.3s ease forwards;
+}
+
+#loader path:nth-child(4) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: strokeAnimate 2s 0.9s ease forwards;
+}
+
+#loader path:nth-child(5) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: strokeAnimate 2s 1.2s ease forwards;
+}
+
+#loader path:nth-child(6) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: strokeAnimate 2s 1.5s ease forwards;
+}
+
+#loader path:nth-child(7) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: strokeAnimate 2s 1.8s ease forwards;
+}
+
+#loader path:nth-child(8) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: strokeAnimate 2s 2.1s ease forwards;
+}
+
+@keyframes strokeAnimate {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #loader-container {
+        max-width: 150px;
+    }
+
+    #loader {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #loader-container {
+        max-width: 100px;
+    }
+
+    #loader {
+        width: 100px;
+    }
+}
+
+@media(min-width: 767px) and (max-width:1100px) {
+    .loadingText {
+        font-size: 25px;
+    }
+
+    .letterRowText {
+        bottom: calc(50% - 160px);
+    }
+}
+
+@media(max-width: 767px) {
+    .loadingText {
+        font-size: 20px;
+    }
+
+    .letterRowText {
+        bottom: calc(50% - 120px);
+    }
+}
+
+/* Animations based on opacity*/
+
+@-webkit-keyframes darkenKeyframes {
+    0% {
+        opacity: 0.4;
+    }
+
+    25% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    75% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@-moz-keyframes darkenKeyframes {
+    0% {
+        opacity: 0.4;
+    }
+
+    25% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    75% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@-ms-keyframes darkenKeyframes {
+    0% {
+        opacity: 0.4;
+    }
+
+    25% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    75% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes darkenKeyframes {
+    0% {
+        opacity: 0.4;
+    }
+
+    25% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    75% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+
+.darkenAnimation1 {
+    -webkit-animation: darkenKeyframes 1.0s infinite linear;
+    -moz-animation: darkenKeyframes 1.0s infinite linear;
+    -ms-animation: darkenKeyframes 1.0s infinite linear;
+    animation: darkenKeyframes 1.0s infinite linear;
+    animation-delay: -0.50s;
+}
+
+.darkenAnimation2 {
+    -webkit-animation: darkenKeyframes 1.0s infinite linear;
+    -moz-animation: darkenKeyframes 1.0s infinite linear;
+    -ms-animation: darkenKeyframes 1.0s infinite linear;
+    animation: darkenKeyframes 1.0s infinite linear;
+    animation-delay: -0.25s;
+}
+
+.darkenAnimation3 {
+    -webkit-animation: darkenKeyframes 1.0s infinite linear;
+    -moz-animation: darkenKeyframes 1.0s infinite linear;
+    -ms-animation: darkenKeyframes 1.0s infinite linear;
+    animation: darkenKeyframes 1.0s infinite linear;
+    animation-delay: 0.0s;
+}
+
+.darkenAnimation4 {
+    -webkit-animation: darkenKeyframes 1.0s infinite linear;
+    -moz-animation: darkenKeyframes 1.0s infinite linear;
+    -ms-animation: darkenKeyframes 1.0s infinite linear;
+    animation: darkenKeyframes 1.0s infinite linear;
+    animation-delay: 0.25s;
+}
