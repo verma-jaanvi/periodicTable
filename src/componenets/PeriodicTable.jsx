@@ -2,8 +2,25 @@ import './PeriodicTable.css';
 import React from 'react';
 import { ELEMENTS } from '../constants/index';
 import ElementTile from './ElementTile';
+import ElementModal from './ElementModel';
+import { useState } from 'react';
 
 const PeriodicTable = () => {
+
+    const [selectedType, setSelectedType] = useState(null);
+    const [selectedGroup, setSelectedGroup] = useState(null);
+    const [selectedPeriod, setSelectedPeriod] = useState(null);
+
+    const [selectedElement, setSelectedElement] = useState(null);
+
+    const openModal = (element) => {
+        return (
+            // console.log(element)        
+            setSelectedElement(element)
+        )
+    };
+    const closeModal = () => setSelectedElement(null);
+
     return (
         <>
             <div className="flex flex-col items-center mt-6 lg:mt-20">
@@ -20,46 +37,112 @@ const PeriodicTable = () => {
                 </p>
             </div>
 
-            <div className="modalContainer">
-                <div className="modal">
-                    <div className="modalHeadingContainer">
-                        <div className="modalElementSymbol"></div>
-                        <div className="modalHeading elementHeading"></div>
-                    </div>
-                    <div className="infoSection">
-                        <div className="modalLabel">Atomic number:<span className=" modalInfo atomicNumber"></span></div>
-                        <div className="modalLabel">Elemental Group:<span className=" modalInfo elementalGroup"></span></div>
-                        <div className="modalLabel">Standard State:<span className=" modalInfo elementState"></span></div>
-                        <div className="modalLabel">Year discovered:<span className=" modalInfo yearDiscovered"></span></div>
-                        <div className="modalLabel modalFactLabel">Element Facts:
-                            <p className="modalInfo elementFacts"></p>
-                        </div>
-                        <div className="modalLabel">Element history:
-                            <p className="modalInfo elementHistory">
-                            </p>
-                        </div>
+            {/* filter  */}
+            <div className="w-full max-w-5xl mx-auto flex flex-col gap-6 py-6 ">
 
-
+                {/* Type Filter */}
+                <div >
+                    <h2 className="text-lg font-semibold mb-2">Element Type</h2>
+                    <div className="flex flex-wrap gap-3" style={{color: "black"}}>
+                        <button
+                            onClick={() => setSelectedType(null)}
+                            className={`px-4 py-2 rounded-full border text-sm font-medium transition ${selectedType === null
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white border-gray-300 hover:bg-gray-100'
+                                }`}
+                        >
+                            All
+                        </button>
+                        {["Metal", "Nonmetal", "Metalloid"].map((type) => (
+                            <button
+                                key={type}
+                                onClick={() => setSelectedType(type)}
+                                className={`px-4 py-2 rounded-full border text-sm font-medium transition ${selectedType === type
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-white border-gray-300 hover:bg-gray-100'
+                                    }`}
+                            >
+                                {type}s
+                            </button>
+                        ))}
                     </div>
-                    <button className="modalButton previousButton">Previous Element</button>
-                    <button className="modalButton nextButton">Next Element</button>
-                    <button className=" closeButton">&#x2715</button>
+                </div>
+
+                {/* Group Filter */}
+                <div>
+                    <h2 className="text-lg font-semibold mb-2">Group</h2>
+                    <div className="flex flex-wrap gap-2" style={{color: "black"}}>
+                        {[...Array(18)].map((_, i) => {
+                            const g = (i + 1).toString();
+                            return (
+                                <button
+                                    key={g}
+                                    onClick={() => setSelectedGroup(g)}
+                                    className={`w-10 h-10 rounded-full border text-sm font-medium transition ${selectedGroup === g
+                                            ? 'bg-green-600 text-white'
+                                            : 'bg-white border-gray-300 hover:bg-gray-100'
+                                        }`}
+                                >
+                                    {g}
+                                </button>
+                            );
+                        })}
+                        <button
+                            onClick={() => setSelectedGroup(null)}
+                            className="ml-2 px-3 py-1 rounded border bg-gray-100 hover:bg-gray-200 text-sm font-medium"
+                        >
+                            Reset
+                        </button>
+                    </div>
+                </div>
+
+                {/* Period Filter */}
+                <div>
+                    <h2 className="text-lg font-semibold mb-2">Period</h2>
+                    <div className="flex flex-wrap gap-2" style={{color: "black"}}>
+                        {[...Array(7)].map((_, i) => {
+                            const p = (i + 1).toString();
+                            return (
+                                <button
+                                    key={p}
+                                    onClick={() => setSelectedPeriod(p)}
+                                    className={`w-10 h-10 rounded-full border text-sm font-medium transition ${selectedPeriod === p
+                                            ? 'bg-purple-600 text-white'
+                                            : 'bg-white border-gray-300 hover:bg-gray-100'
+                                        }`}
+                                >
+                                    {p}
+                                </button>
+                            );
+                        })}
+                        <button
+                            onClick={() => setSelectedPeriod(null)}
+                            className="ml-2 px-3 py-1 rounded border bg-gray-100 hover:bg-gray-200 text-sm font-medium"
+                        >
+                            Reset
+                        </button>
+                    </div>
                 </div>
             </div>
 
+            {/* Periodic Table */}
 
-            <div className="periodicTable" id="displayTable">
-                    {ELEMENTS.map((el) => (
-                        <ElementTile
-                            key={el.id}
-                            category={el.category}
-                            title={el.title}
-                            number={el.number}
-                            weight={el.weight}
-                            symbol={el.symbol}
-                            name={el.name}
-                        />
+            <div className="appContainer periodicTable" id="displayTable">
+                {ELEMENTS
+                    .filter((el) => {
+                        const matchType = !selectedType || el.category === selectedType;
+                        const matchGroup = !selectedGroup || el.group === selectedGroup;
+                        const matchPeriod = !selectedPeriod || el.period === selectedPeriod;
+                        return matchType && matchGroup && matchPeriod;
+                    })
+                    .map((el) => (
+                        <ElementTile key={el.id} element={el} onClick={openModal} />
                     ))}
+
+
+                {selectedElement && (
+                    <ElementModal element={selectedElement} onClose={closeModal} />
+                )}
 
                 <div className="blankRow1"></div>
                 <div className="blankRow2"></div>

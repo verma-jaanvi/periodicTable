@@ -22,12 +22,6 @@ function App() {
   return (
     <>
         <Navbar />
-        {/* <Routes>
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/about" element={<FeatureSection />} />
-          <Route path="/periodic-table" element={<PeriodicTable />} />
-          <Route path="/contact" element={<Footer />} />
-        </Routes> */}
       <div className="max-w-7xl mx-auto pt-20 px-6">
         <HeroSection />
         <FeatureSection />

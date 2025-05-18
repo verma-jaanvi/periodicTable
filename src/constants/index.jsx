@@ -4,9 +4,10 @@ import { Fingerprint } from "lucide-react";
 import { ShieldHalf } from "lucide-react";
 import { PlugZap } from "lucide-react";
 import { GlobeLock } from "lucide-react";
+import HeroSection from "../componenets/HeroSection";
 
 export const navItems = [
-  { label: "Home", to: "/" },
+  { label: "Home", to: "</" },
   { label: "About", to: "/about" },
   { label: "Periodic Table", to: "/periodic-table" },
   { label: "Contact Us", to: "/contact" },
@@ -55,12 +56,20 @@ export const features = [
 export const ELEMENTS = [
   {
     id: 1,
-    category: 'nonMetal',
-    title: 'Non-Metal',
+    period: 1,
+    category: 'nonMetal',              // Use for filtering logic (lowercase is fine)
+    title: 'Non-Metal',                // Display name
     number: 1,
     weight: '1.008',
     symbol: 'H',
     name: 'Hydrogen',
+    group: 'Nonmetal',                 // Consistent with filter button
+    state: 'Gas',
+    discovered: '1766',
+    facts: "It's the most abundant element in the universe.",
+    history: 'Discovered by Henry Cavendish.',
+    image: 'https://i.pinimg.com/736x/1f/0b/97/1f0b97c5c6a1767c51ae1f7a6bf8126b.jpg', // Uncommented safely
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=c21909d81a8d473187bde869d1e3aca1&autostart=0'
   },
   {
     id: 2,
@@ -70,6 +79,11 @@ export const ELEMENTS = [
     weight: '4.0026',
     symbol: 'He',
     name: 'Helium',
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     id: 3,
@@ -79,6 +93,11 @@ export const ELEMENTS = [
     weight: '6.94',
     symbol: 'Li',
     name: 'Lithium',
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     id: 4,
@@ -88,6 +107,11 @@ export const ELEMENTS = [
     weight: '9.0122',
     symbol: 'Be',
     name: 'Beryllium',
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     id: 5,
@@ -97,6 +121,11 @@ export const ELEMENTS = [
     weight: '10.81',
     symbol: 'B',
     name: 'Boron',
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     id: 6,
@@ -106,6 +135,11 @@ export const ELEMENTS = [
     weight: '12.011',
     symbol: 'C',
     name: 'Carbon',
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     id: 7,
@@ -115,6 +149,11 @@ export const ELEMENTS = [
     weight: '14.007',
     symbol: 'N',
     name: 'Nitrogen',
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     id: 8,
@@ -124,6 +163,11 @@ export const ELEMENTS = [
     weight: '15.999',
     symbol: 'O',
     name: 'Oxygen',
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 9,
@@ -132,6 +176,11 @@ export const ELEMENTS = [
     weight: "18.998",
     category: "halogen",
     title: "Halogen",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 10,
@@ -140,6 +189,11 @@ export const ELEMENTS = [
     weight: "20.180",
     category: "nobleGas",
     title: "Noble Gas",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 11,
@@ -148,6 +202,11 @@ export const ELEMENTS = [
     weight: "22.990",
     category: "alkaliMetal",
     title: "Alkali Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 12,
@@ -156,6 +215,11 @@ export const ELEMENTS = [
     weight: "24.305",
     category: "alkalineEarthMetal",
     title: "Alkaline Earth Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 13,
@@ -164,6 +228,11 @@ export const ELEMENTS = [
     weight: "26.982",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 14,
@@ -172,6 +241,11 @@ export const ELEMENTS = [
     weight: "28.085",
     category: "metalloid",
     title: "Metalloid",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 15,
@@ -180,6 +254,11 @@ export const ELEMENTS = [
     weight: "30.974",
     category: "nonMetal",
     title: "Non-Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 16,
@@ -188,6 +267,11 @@ export const ELEMENTS = [
     weight: "32.06",
     category: "nonMetal",
     title: "Non-Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 17,
@@ -196,6 +280,11 @@ export const ELEMENTS = [
     weight: "35.45",
     category: "halogen",
     title: "Halogen",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 18,
@@ -204,6 +293,11 @@ export const ELEMENTS = [
     weight: "39.948",
     category: "nobleGas",
     title: "Noble Gas",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 19,
@@ -212,6 +306,11 @@ export const ELEMENTS = [
     weight: "39.098",
     category: "alkaliMetal",
     title: "Alkali Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 20,
@@ -220,6 +319,11 @@ export const ELEMENTS = [
     weight: "40.078",
     category: "alkalineEarthMetal",
     title: "Alkaline Earth Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 21,
@@ -228,6 +332,11 @@ export const ELEMENTS = [
     weight: "44.956",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 22,
@@ -236,6 +345,11 @@ export const ELEMENTS = [
     weight: "47.867",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 23,
@@ -244,6 +358,11 @@ export const ELEMENTS = [
     weight: "50.942",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 24,
@@ -252,6 +371,11 @@ export const ELEMENTS = [
     weight: "51.996",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 25,
@@ -260,6 +384,11 @@ export const ELEMENTS = [
     weight: "54.938",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 26,
@@ -268,6 +397,11 @@ export const ELEMENTS = [
     weight: "55.845",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 27,
@@ -276,6 +410,11 @@ export const ELEMENTS = [
     weight: "58.933",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 28,
@@ -284,6 +423,11 @@ export const ELEMENTS = [
     weight: "58.693",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 29,
@@ -292,6 +436,11 @@ export const ELEMENTS = [
     weight: "63.546",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 30,
@@ -300,6 +449,11 @@ export const ELEMENTS = [
     weight: "65.38",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 31,
@@ -308,6 +462,11 @@ export const ELEMENTS = [
     weight: "69.723",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 32,
@@ -316,6 +475,11 @@ export const ELEMENTS = [
     weight: "72.630",
     category: "metalloid",
     title: "Metalloid",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 33,
@@ -324,6 +488,11 @@ export const ELEMENTS = [
     weight: "74.922",
     category: "metalloid",
     title: "Metalloid",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 34,
@@ -332,6 +501,11 @@ export const ELEMENTS = [
     weight: "78.971",
     category: "nonMetal",
     title: "Non-Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 35,
@@ -340,6 +514,11 @@ export const ELEMENTS = [
     weight: "79.904",
     category: "halogen",
     title: "Halogen",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 36,
@@ -348,6 +527,11 @@ export const ELEMENTS = [
     weight: "83.798",
     category: "nobleGas",
     title: "Noble Gas",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 37,
@@ -356,6 +540,11 @@ export const ELEMENTS = [
     weight: "85.468",
     category: "alkaliMetal",
     title: "Alkali Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 38,
@@ -364,6 +553,11 @@ export const ELEMENTS = [
     weight: "87.62",
     category: "alkalineEarthMetal",
     title: "Alkaline Earth Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 39,
@@ -372,6 +566,11 @@ export const ELEMENTS = [
     weight: "88.906",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 40,
@@ -380,6 +579,11 @@ export const ELEMENTS = [
     weight: "91.224",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 41,
@@ -388,6 +592,11 @@ export const ELEMENTS = [
     weight: "92.906",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 42,
@@ -396,6 +605,11 @@ export const ELEMENTS = [
     weight: "95.95",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 43,
@@ -404,6 +618,11 @@ export const ELEMENTS = [
     weight: "[98]",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 44,
@@ -412,7 +631,13 @@ export const ELEMENTS = [
     weight: "101.07",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
+
   {
     number: 45,
     symbol: "Rh",
@@ -420,6 +645,11 @@ export const ELEMENTS = [
     weight: "102.91",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 46,
@@ -428,6 +658,11 @@ export const ELEMENTS = [
     weight: "106.42",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 47,
@@ -436,6 +671,11 @@ export const ELEMENTS = [
     weight: "107.87",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 48,
@@ -444,6 +684,11 @@ export const ELEMENTS = [
     weight: "112.41",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 49,
@@ -452,6 +697,11 @@ export const ELEMENTS = [
     weight: "114.82",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 50,
@@ -460,6 +710,11 @@ export const ELEMENTS = [
     weight: "118.71",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 51,
@@ -468,6 +723,11 @@ export const ELEMENTS = [
     weight: "121.76",
     category: "metalloid",
     title: "Metalloid",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 52,
@@ -476,6 +736,11 @@ export const ELEMENTS = [
     weight: "127.60",
     category: "metalloid",
     title: "Metalloid",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 53,
@@ -484,6 +749,11 @@ export const ELEMENTS = [
     weight: "126.90",
     category: "halogen",
     title: "Halogen",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 54,
@@ -492,6 +762,11 @@ export const ELEMENTS = [
     weight: "131.29",
     category: "nobleGas",
     title: "Noble Gas",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 55,
@@ -500,6 +775,11 @@ export const ELEMENTS = [
     weight: "132.91",
     category: "alkaliMetal",
     title: "Alkali Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 56,
@@ -508,6 +788,11 @@ export const ELEMENTS = [
     weight: "137.33",
     category: "alkalineEarthMetal",
     title: "Alkaline Earth Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 72,
@@ -516,6 +801,11 @@ export const ELEMENTS = [
     weight: "178.49",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 73,
@@ -524,6 +814,11 @@ export const ELEMENTS = [
     weight: "180.95",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 74,
@@ -532,6 +827,11 @@ export const ELEMENTS = [
     weight: "183.84",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 75,
@@ -540,6 +840,11 @@ export const ELEMENTS = [
     weight: "186.21",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 76,
@@ -548,6 +853,11 @@ export const ELEMENTS = [
     weight: "190.23",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 77,
@@ -556,6 +866,11 @@ export const ELEMENTS = [
     weight: "192.22",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 78,
@@ -564,6 +879,11 @@ export const ELEMENTS = [
     weight: "195.08",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 79,
@@ -572,6 +892,11 @@ export const ELEMENTS = [
     weight: "196.97",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 80,
@@ -580,6 +905,11 @@ export const ELEMENTS = [
     weight: "200.59",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 81,
@@ -588,6 +918,11 @@ export const ELEMENTS = [
     weight: "204.38",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 82,
@@ -596,6 +931,11 @@ export const ELEMENTS = [
     weight: "207.2",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 83,
@@ -604,6 +944,11 @@ export const ELEMENTS = [
     weight: "208.98",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 84,
@@ -612,6 +957,11 @@ export const ELEMENTS = [
     weight: "[209]",
     category: "metalloid",
     title: "Metalloid",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 85,
@@ -620,6 +970,11 @@ export const ELEMENTS = [
     weight: "[210]",
     category: "halogen",
     title: "Halogen",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 86,
@@ -628,6 +983,11 @@ export const ELEMENTS = [
     weight: "[222]",
     category: "nobleGas",
     title: "Noble Gas",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 87,
@@ -636,6 +996,11 @@ export const ELEMENTS = [
     weight: "[223]",
     category: "alkaliMetal",
     title: "Alkali Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 88,
@@ -644,6 +1009,11 @@ export const ELEMENTS = [
     weight: "[226]",
     category: "alkalineEarthMetal",
     title: "Alkaline Earth Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 104,
@@ -652,6 +1022,11 @@ export const ELEMENTS = [
     weight: "[267]",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 105,
@@ -660,6 +1035,11 @@ export const ELEMENTS = [
     weight: "[270]",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 106,
@@ -668,6 +1048,11 @@ export const ELEMENTS = [
     weight: "[271]",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 107,
@@ -676,6 +1061,11 @@ export const ELEMENTS = [
     weight: "[270]",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 108,
@@ -683,6 +1073,11 @@ export const ELEMENTS = [
     name: "Hassium",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 109,
@@ -690,6 +1085,11 @@ export const ELEMENTS = [
     name: "Meitnerium",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 110,
@@ -697,6 +1097,11 @@ export const ELEMENTS = [
     name: "Darmstadtium",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 111,
@@ -704,6 +1109,11 @@ export const ELEMENTS = [
     name: "Roentgenium",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 112,
@@ -711,6 +1121,11 @@ export const ELEMENTS = [
     name: "Copernicium",
     category: "transitionMetal",
     title: "Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 113,
@@ -718,6 +1133,11 @@ export const ELEMENTS = [
     name: "Nihonium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 114,
@@ -725,6 +1145,11 @@ export const ELEMENTS = [
     name: "Flerovium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 115,
@@ -732,6 +1157,11 @@ export const ELEMENTS = [
     name: "Moscovium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 116,
@@ -739,6 +1169,11 @@ export const ELEMENTS = [
     name: "Livermorium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 117,
@@ -746,6 +1181,11 @@ export const ELEMENTS = [
     name: "Tennessine",
     category: "halogen",
     title: "Halogen",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 118,
@@ -753,6 +1193,11 @@ export const ELEMENTS = [
     name: "Oganesson",
     category: "nobleGas",
     title: "Noble Gas",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 57,
@@ -760,6 +1205,11 @@ export const ELEMENTS = [
     name: "Lanthanum",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 58,
@@ -767,6 +1217,11 @@ export const ELEMENTS = [
     name: "Cerium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 59,
@@ -774,6 +1229,11 @@ export const ELEMENTS = [
     name: "Praseodymium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 60,
@@ -781,6 +1241,11 @@ export const ELEMENTS = [
     name: "Neodymium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 61,
@@ -788,6 +1253,11 @@ export const ELEMENTS = [
     name: "Promethium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 62,
@@ -795,6 +1265,11 @@ export const ELEMENTS = [
     name: "Samarium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 63,
@@ -802,6 +1277,11 @@ export const ELEMENTS = [
     name: "Europium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 64,
@@ -809,6 +1289,11 @@ export const ELEMENTS = [
     name: "Gadolinium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 65,
@@ -816,6 +1301,11 @@ export const ELEMENTS = [
     name: "Terbium",
     category: "lanthanide",
     title: "Lanthanide",
+    group: 'Noble gas',
+    state: 'Gas',
+    discovered: '1868',
+    facts: "Second most abundant element in the universe.",
+    history: 'Detected in the solar spectrum.'
   },
   {
     number: 66,
