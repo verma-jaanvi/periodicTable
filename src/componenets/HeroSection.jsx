@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="flex justify-center my-10">
         <a
           href="https://www.thoughtco.com/cool-chemistry-experiments-604271"
-          className="bg-gradient-to-r from-blue-900 to-red-800 py-3 px-4 mx-3 rounded-md"
+          className="bg-gradient-to-r from-blue-900 to-green-800 py-3 px-4 mx-3 rounded-md"
         >
           Explore Documentation
         </a>
@@ -31,7 +31,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-red-900 shadow-sm shadow-yellow-400 mx-2 my-4"
+          className="rounded-lg w-1/2 border border-green-900 shadow-sm shadow-blue-400 mx-2 my-4"
         >
           <source src={video1} type="video/mp4" />
           Your browser does not support the video tag.

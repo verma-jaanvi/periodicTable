@@ -63,7 +63,7 @@ export const ELEMENTS = [
     weight: '1.008',
     symbol: 'H',
     name: 'Hydrogen',
-    group: 'Nonmetal',                 // Consistent with filter button
+    group: 1,                 // Consistent with filter button
     state: 'Gas',
     discovered: '1766',
     facts: "It's the most abundant element in the universe.",
@@ -78,6 +78,7 @@ export const ELEMENTS = [
     number: 2,
     weight: '4.0026',
     symbol: 'He',
+    period: 1,
     name: 'Helium',
     group: 'Noble gas',
     state: 'Gas',
@@ -93,11 +94,14 @@ export const ELEMENTS = [
     weight: '6.94',
     symbol: 'Li',
     name: 'Lithium',
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    period: 2,
+    group: 1,
+    state: 'Solid',
+    discovered: '1817',
+    facts: "Used in rechargeable batteries and mood-stabilizing medications.",
+    history: 'Discovered by Johan August Arfvedson.',
+    image: 'https://cdn.britannica.com/48/9448-050-3B3F5B65/Lithium.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleLithiumModel&autostart=0'
   },
   {
     id: 4,
@@ -107,11 +111,14 @@ export const ELEMENTS = [
     weight: '9.0122',
     symbol: 'Be',
     name: 'Beryllium',
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    period: 2,
+    group: 2,
+    state: 'Solid',
+    discovered: '1798',
+    facts: "Used in aerospace materials due to its light weight and stiffness.",
+    history: 'Discovered by Louis Nicolas Vauquelin.',
+    image: 'https://cdn.britannica.com/61/9461-004-ACD9ED17/Beryllium.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleBerylliumModel&autostart=0'
   },
   {
     id: 5,
@@ -121,11 +128,14 @@ export const ELEMENTS = [
     weight: '10.81',
     symbol: 'B',
     name: 'Boron',
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    period: 2,
+    group: 13,
+    state: 'Solid',
+    discovered: '1808',
+    facts: "Essential for plant growth and used in borosilicate glass.",
+    history: 'Discovered by Sir Humphry Davy, Joseph Gay-Lussac, and Louis Jacques Thénard.',
+    image: 'https://cdn.britannica.com/80/178080-050-658B8BCB/Boron.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleBoronModel&autostart=0'
   },
   {
     id: 6,
@@ -135,11 +145,14 @@ export const ELEMENTS = [
     weight: '12.011',
     symbol: 'C',
     name: 'Carbon',
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    period: 2,
+    group: 14,
+    state: 'Solid',
+    discovered: 'Ancient',
+    facts: "Exists in various forms like graphite, diamond, and fullerenes.",
+    history: 'Known since ancient times; used as charcoal.',
+    image: 'https://cdn.britannica.com/77/9477-050-2AFC7326/Carbon.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleCarbonModel&autostart=0'
   },
   {
     id: 7,
@@ -149,11 +162,14 @@ export const ELEMENTS = [
     weight: '14.007',
     symbol: 'N',
     name: 'Nitrogen',
-    group: 'Noble gas',
+    period: 2,
+    group: 15,
     state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    discovered: '1772',
+    facts: "Makes up about 78% of Earth's atmosphere.",
+    history: 'Discovered by Daniel Rutherford.',
+    image: 'https://cdn.britannica.com/69/9469-050-ED98B71D/Nitrogen.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleNitrogenModel&autostart=0'
   },
   {
     id: 8,
@@ -163,93 +179,121 @@ export const ELEMENTS = [
     weight: '15.999',
     symbol: 'O',
     name: 'Oxygen',
-    group: 'Noble gas',
+    period: 2,
+    group: 16,
     state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    discovered: '1774',
+    facts: "Essential for respiration in most living organisms.",
+    history: 'Discovered by Joseph Priestley and Carl Wilhelm Scheele independently.',
+    image: 'https://cdn.britannica.com/86/9486-050-0D71F4B5/Oxygen.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleOxygenModel&autostart=0'
   },
   {
+    id: 9,
+    category: 'halogen',
+    title: 'Halogen',
     number: 9,
-    symbol: "F",
-    name: "Fluorine",
-    weight: "18.998",
-    category: "halogen",
-    title: "Halogen",
-    group: 'Noble gas',
+    weight: '18.998',
+    symbol: 'F',
+    name: 'Fluorine',
+    period: 2,
+    group: 17,
     state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    discovered: '1886',
+    facts: "Most reactive and electronegative of all elements.",
+    history: 'Isolated by Henri Moissan using electrolysis.',
+    image: 'https://cdn.britannica.com/60/9460-050-2D123D54/Fluorine.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleFluorineModel&autostart=0'
   },
   {
+    id: 10,
+    category: 'nobleGas',
+    title: 'Noble Gas',
     number: 10,
-    symbol: "Ne",
-    name: "Neon",
-    weight: "20.180",
-    category: "nobleGas",
-    title: "Noble Gas",
-    group: 'Noble gas',
+    weight: '20.180',
+    symbol: 'Ne',
+    name: 'Neon',
+    period: 2,
+    group: 18,
     state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    discovered: '1898',
+    facts: "Used in neon signs and high-voltage indicators.",
+    history: 'Discovered by William Ramsay and Morris Travers.',
+    image: 'https://cdn.britannica.com/78/9478-050-0E7B5F70/Neon.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleNeonModel&autostart=0'
   },
   {
+    id: 11,
+    category: 'alkaliMetal',
+    title: 'Alkali Metal',
     number: 11,
-    symbol: "Na",
-    name: "Sodium",
-    weight: "22.990",
-    category: "alkaliMetal",
-    title: "Alkali Metal",
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    weight: '22.990',
+    symbol: 'Na',
+    name: 'Sodium',
+    period: 3,
+    group: 1,
+    state: 'Solid',
+    discovered: '1807',
+    facts: "Highly reactive and essential for nerve function in the human body.",
+    history: 'Isolated by Sir Humphry Davy using electrolysis of caustic soda.',
+    image: 'https://cdn.britannica.com/44/9444-004-3CE68A51/Sodium.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleSodiumModel&autostart=0'
   },
   {
+    id: 12,
+    category: 'alkalineEarthMetal',
+    title: 'Alkaline Earth Metal',
     number: 12,
-    symbol: "Mg",
-    name: "Magnesium",
-    weight: "24.305",
-    category: "alkalineEarthMetal",
-    title: "Alkaline Earth Metal",
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    weight: '24.305',
+    symbol: 'Mg',
+    name: 'Magnesium',
+    period: 3,
+    group: 2,
+    state: 'Solid',
+    discovered: '1755',
+    facts: "Burns with a bright white flame; used in flares and fireworks.",
+    history: 'Recognized as an element by Joseph Black.',
+    image: 'https://cdn.britannica.com/71/9471-050-2F4DF4B9/Magnesium.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleMagnesiumModel&autostart=0'
   },
   {
+    id: 13,
+    category: 'postTransitionMetal',
+    title: 'Post Transition Metal',
     number: 13,
-    symbol: "Al",
-    name: "Aluminium",
-    weight: "26.982",
-    category: "postTransitionMetal",
-    title: "Post Transition Metal",
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    weight: '26.982',
+    symbol: 'Al',
+    name: 'Aluminium',
+    period: 3,
+    group: 13,
+    state: 'Solid',
+    discovered: '1825',
+    facts: "Lightweight and corrosion-resistant; widely used in packaging and construction.",
+    history: 'First isolated by Hans Christian Ørsted.',
+    image: 'https://cdn.britannica.com/83/9483-050-2EC82ED7/Aluminum.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleAluminiumModel&autostart=0'
   },
   {
+    id: 14,
+    category: 'metalloid',
+    title: 'Metalloid',
     number: 14,
-    symbol: "Si",
-    name: "Silicon",
-    weight: "28.085",
-    category: "metalloid",
-    title: "Metalloid",
-    group: 'Noble gas',
-    state: 'Gas',
-    discovered: '1868',
-    facts: "Second most abundant element in the universe.",
-    history: 'Detected in the solar spectrum.'
+    weight: '28.085',
+    symbol: 'Si',
+    name: 'Silicon',
+    period: 3,
+    group: 14,
+    state: 'Solid',
+    discovered: '1824',
+    facts: "Key component in semiconductors and computer chips.",
+    history: 'Isolated by Jöns Jakob Berzelius.',
+    image: 'https://cdn.britannica.com/77/9477-004-183EE131/Silicon.jpg',
+    modelUrl: 'https://sketchfab.com/playlists/embed?collection=exampleSiliconModel&autostart=0'
   },
   {
     number: 15,
     symbol: "P",
+    period: 1,
     name: "Phosphorus",
     weight: "30.974",
     category: "nonMetal",
@@ -263,6 +307,7 @@ export const ELEMENTS = [
   {
     number: 16,
     symbol: "S",
+    period: 1,
     name: "Sulfur",
     weight: "32.06",
     category: "nonMetal",
@@ -276,6 +321,7 @@ export const ELEMENTS = [
   {
     number: 17,
     symbol: "Cl",
+    period: 1,
     name: "Chlorine",
     weight: "35.45",
     category: "halogen",
@@ -289,6 +335,7 @@ export const ELEMENTS = [
   {
     number: 18,
     symbol: "Ar",
+    period: 1,
     name: "Argon",
     weight: "39.948",
     category: "nobleGas",
@@ -302,6 +349,7 @@ export const ELEMENTS = [
   {
     number: 19,
     symbol: "K",
+    period: 1,
     name: "Potassium",
     weight: "39.098",
     category: "alkaliMetal",
@@ -315,6 +363,7 @@ export const ELEMENTS = [
   {
     number: 20,
     symbol: "Ca",
+    period: 1,
     name: "Calcium",
     weight: "40.078",
     category: "alkalineEarthMetal",
@@ -328,12 +377,13 @@ export const ELEMENTS = [
   {
     number: 21,
     symbol: "Sc",
+    period: 1,
     name: "Scandium",
     weight: "44.956",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -341,12 +391,13 @@ export const ELEMENTS = [
   {
     number: 22,
     symbol: "Ti",
+    period: 1,
     name: "Titanium",
     weight: "47.867",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -354,12 +405,13 @@ export const ELEMENTS = [
   {
     number: 23,
     symbol: "V",
+    period: 1,
     name: "Vanadium",
     weight: "50.942",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -367,12 +419,13 @@ export const ELEMENTS = [
   {
     number: 24,
     symbol: "Cr",
+    period: 1,
     name: "Chromium",
     weight: "51.996",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -380,12 +433,13 @@ export const ELEMENTS = [
   {
     number: 25,
     symbol: "Mn",
+    period: 1,
     name: "Manganese",
     weight: "54.938",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -393,12 +447,13 @@ export const ELEMENTS = [
   {
     number: 26,
     symbol: "Fe",
+    period: 1,
     name: "Iron",
     weight: "55.845",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -406,12 +461,13 @@ export const ELEMENTS = [
   {
     number: 27,
     symbol: "Co",
+    period: 1,
     name: "Cobalt",
     weight: "58.933",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -419,12 +475,13 @@ export const ELEMENTS = [
   {
     number: 28,
     symbol: "Ni",
+    period: 1,
     name: "Nickel",
     weight: "58.693",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -432,12 +489,13 @@ export const ELEMENTS = [
   {
     number: 29,
     symbol: "Cu",
+    period: 1,
     name: "Copper",
     weight: "63.546",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -445,12 +503,13 @@ export const ELEMENTS = [
   {
     number: 30,
     symbol: "Zn",
+    period: 1,
     name: "Zinc",
     weight: "65.38",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -458,12 +517,13 @@ export const ELEMENTS = [
   {
     number: 31,
     symbol: "Ga",
+    period: 1,
     name: "Gallium",
     weight: "69.723",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -471,12 +531,13 @@ export const ELEMENTS = [
   {
     number: 32,
     symbol: "Ge",
+    period: 1,
     name: "Germanium",
     weight: "72.630",
     category: "metalloid",
     title: "Metalloid",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -484,12 +545,13 @@ export const ELEMENTS = [
   {
     number: 33,
     symbol: "As",
+    period: 1,
     name: "Arsenic",
     weight: "74.922",
     category: "metalloid",
     title: "Metalloid",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -497,12 +559,13 @@ export const ELEMENTS = [
   {
     number: 34,
     symbol: "Se",
+    period: 1,
     name: "Selenium",
     weight: "78.971",
     category: "nonMetal",
     title: "Non-Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -510,12 +573,13 @@ export const ELEMENTS = [
   {
     number: 35,
     symbol: "Br",
+    period: 1,
     name: "Bromine",
     weight: "79.904",
     category: "halogen",
     title: "Halogen",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -523,12 +587,13 @@ export const ELEMENTS = [
   {
     number: 36,
     symbol: "Kr",
+    period: 1,
     name: "Krypton",
     weight: "83.798",
     category: "nobleGas",
     title: "Noble Gas",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -536,12 +601,13 @@ export const ELEMENTS = [
   {
     number: 37,
     symbol: "Rb",
+    period: 1,
     name: "Rubidium",
     weight: "85.468",
     category: "alkaliMetal",
     title: "Alkali Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -549,12 +615,13 @@ export const ELEMENTS = [
   {
     number: 38,
     symbol: "Sr",
+    period: 1,
     name: "Strontium",
     weight: "87.62",
     category: "alkalineEarthMetal",
     title: "Alkaline Earth Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -562,12 +629,13 @@ export const ELEMENTS = [
   {
     number: 39,
     symbol: "Y",
+    period: 1,
     name: "Yttrium",
     weight: "88.906",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -575,12 +643,13 @@ export const ELEMENTS = [
   {
     number: 40,
     symbol: "Zr",
+    period: 1,
     name: "Zirconium",
     weight: "91.224",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -588,12 +657,13 @@ export const ELEMENTS = [
   {
     number: 41,
     symbol: "Nb",
+    period: 1,
     name: "Niobium",
     weight: "92.906",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -601,12 +671,13 @@ export const ELEMENTS = [
   {
     number: 42,
     symbol: "Mo",
+    period: 1,
     name: "Molybdenum",
     weight: "95.95",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Liquid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -614,6 +685,7 @@ export const ELEMENTS = [
   {
     number: 43,
     symbol: "Tc",
+    period: 1,
     name: "Technetium",
     weight: "[98]",
     category: "transitionMetal",
@@ -627,6 +699,7 @@ export const ELEMENTS = [
   {
     number: 44,
     symbol: "Ru",
+    period: 1,
     name: "Ruthenium",
     weight: "101.07",
     category: "transitionMetal",
@@ -641,12 +714,13 @@ export const ELEMENTS = [
   {
     number: 45,
     symbol: "Rh",
+    period: 1,
     name: "Rhodium",
     weight: "102.91",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -654,12 +728,13 @@ export const ELEMENTS = [
   {
     number: 46,
     symbol: "Pd",
+    period: 1,
     name: "Palladium",
     weight: "106.42",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -667,12 +742,13 @@ export const ELEMENTS = [
   {
     number: 47,
     symbol: "Ag",
+    period: 1,
     name: "Silver",
     weight: "107.87",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -680,12 +756,13 @@ export const ELEMENTS = [
   {
     number: 48,
     symbol: "Cd",
+    period: 1,
     name: "Cadmium",
     weight: "112.41",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -693,12 +770,13 @@ export const ELEMENTS = [
   {
     number: 49,
     symbol: "In",
+    period: 1,
     name: "Indium",
     weight: "114.82",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -706,12 +784,13 @@ export const ELEMENTS = [
   {
     number: 50,
     symbol: "Sn",
+    period: 1,
     name: "Tin",
     weight: "118.71",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -719,12 +798,13 @@ export const ELEMENTS = [
   {
     number: 51,
     symbol: "Sb",
+    period: 1,
     name: "Antimony",
     weight: "121.76",
     category: "metalloid",
     title: "Metalloid",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -732,12 +812,13 @@ export const ELEMENTS = [
   {
     number: 52,
     symbol: "Te",
+    period: 1,
     name: "Tellurium",
     weight: "127.60",
     category: "metalloid",
     title: "Metalloid",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -745,12 +826,13 @@ export const ELEMENTS = [
   {
     number: 53,
     symbol: "I",
+    period: 1,
     name: "Iodine",
     weight: "126.90",
     category: "halogen",
     title: "Halogen",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -758,12 +840,13 @@ export const ELEMENTS = [
   {
     number: 54,
     symbol: "Xe",
+    period: 1,
     name: "Xenon",
     weight: "131.29",
     category: "nobleGas",
     title: "Noble Gas",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -771,12 +854,13 @@ export const ELEMENTS = [
   {
     number: 55,
     symbol: "Cs",
+    period: 1,
     name: "Caesium",
     weight: "132.91",
     category: "alkaliMetal",
     title: "Alkali Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -784,12 +868,13 @@ export const ELEMENTS = [
   {
     number: 56,
     symbol: "Ba",
+    period: 1,
     name: "Barium",
     weight: "137.33",
     category: "alkalineEarthMetal",
     title: "Alkaline Earth Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -797,12 +882,13 @@ export const ELEMENTS = [
   {
     number: 72,
     symbol: "Hf",
+    period: 1,
     name: "Hafnium",
     weight: "178.49",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -810,12 +896,13 @@ export const ELEMENTS = [
   {
     number: 73,
     symbol: "Ta",
+    period: 1,
     name: "Tantalum",
     weight: "180.95",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -823,12 +910,13 @@ export const ELEMENTS = [
   {
     number: 74,
     symbol: "W",
+    period: 1,
     name: "Tungsten",
     weight: "183.84",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -836,12 +924,13 @@ export const ELEMENTS = [
   {
     number: 75,
     symbol: "Re",
+    period: 1,
     name: "Rhenium",
     weight: "186.21",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -849,12 +938,13 @@ export const ELEMENTS = [
   {
     number: 76,
     symbol: "Os",
+    period: 1,
     name: "Osmium",
     weight: "190.23",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -862,12 +952,13 @@ export const ELEMENTS = [
   {
     number: 77,
     symbol: "Ir",
+    period: 1,
     name: "Iridium",
     weight: "192.22",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -875,12 +966,13 @@ export const ELEMENTS = [
   {
     number: 78,
     symbol: "Pt",
+    period: 1,
     name: "Platinum",
     weight: "195.08",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -888,12 +980,13 @@ export const ELEMENTS = [
   {
     number: 79,
     symbol: "Au",
+    period: 1,
     name: "Gold",
     weight: "196.97",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -901,12 +994,13 @@ export const ELEMENTS = [
   {
     number: 80,
     symbol: "Hg",
+    period: 1,
     name: "Mercury",
     weight: "200.59",
     category: "transitionMetal",
     title: "Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -914,12 +1008,13 @@ export const ELEMENTS = [
   {
     number: 81,
     symbol: "Tl",
+    period: 1,
     name: "Thallium",
     weight: "204.38",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -927,12 +1022,13 @@ export const ELEMENTS = [
   {
     number: 82,
     symbol: "Pb",
+    period: 1,
     name: "Lead",
     weight: "207.2",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -940,12 +1036,13 @@ export const ELEMENTS = [
   {
     number: 83,
     symbol: "Bi",
+    period: 1,
     name: "Bismuth",
     weight: "208.98",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -953,12 +1050,13 @@ export const ELEMENTS = [
   {
     number: 84,
     symbol: "Po",
+    period: 1,
     name: "Polonium",
     weight: "[209]",
     category: "metalloid",
     title: "Metalloid",
     group: 'Noble gas',
-    state: 'Gas',
+    state: 'Solid',
     discovered: '1868',
     facts: "Second most abundant element in the universe.",
     history: 'Detected in the solar spectrum.'
@@ -966,6 +1064,7 @@ export const ELEMENTS = [
   {
     number: 85,
     symbol: "At",
+    period: 1,
     name: "Astatine",
     weight: "[210]",
     category: "halogen",
@@ -979,6 +1078,7 @@ export const ELEMENTS = [
   {
     number: 86,
     symbol: "Rn",
+    period: 1,
     name: "Radon",
     weight: "[222]",
     category: "nobleGas",
@@ -992,6 +1092,7 @@ export const ELEMENTS = [
   {
     number: 87,
     symbol: "Fr",
+    period: 1,
     name: "Francium",
     weight: "[223]",
     category: "alkaliMetal",
@@ -1005,6 +1106,7 @@ export const ELEMENTS = [
   {
     number: 88,
     symbol: "Ra",
+    period: 1,
     name: "Radium",
     weight: "[226]",
     category: "alkalineEarthMetal",
@@ -1018,6 +1120,7 @@ export const ELEMENTS = [
   {
     number: 104,
     symbol: "Rf",
+    period: 1,
     name: "Rutherfordium",
     weight: "[267]",
     category: "transitionMetal",
@@ -1031,6 +1134,7 @@ export const ELEMENTS = [
   {
     number: 105,
     symbol: "Db",
+    period: 1,
     name: "Dubnium",
     weight: "[270]",
     category: "transitionMetal",
@@ -1044,6 +1148,7 @@ export const ELEMENTS = [
   {
     number: 106,
     symbol: "Sg",
+    period: 1,
     name: "Seaborgium",
     weight: "[271]",
     category: "transitionMetal",
@@ -1057,6 +1162,7 @@ export const ELEMENTS = [
   {
     number: 107,
     symbol: "Bh",
+    period: 1,
     name: "Bohrium",
     weight: "[270]",
     category: "transitionMetal",
@@ -1070,6 +1176,7 @@ export const ELEMENTS = [
   {
     number: 108,
     symbol: "Hs",
+    period: 1,
     name: "Hassium",
     category: "transitionMetal",
     title: "Transition Metal",
@@ -1082,6 +1189,7 @@ export const ELEMENTS = [
   {
     number: 109,
     symbol: "Mt",
+    period: 1,
     name: "Meitnerium",
     category: "transitionMetal",
     title: "Transition Metal",
@@ -1094,6 +1202,7 @@ export const ELEMENTS = [
   {
     number: 110,
     symbol: "Ds",
+    period: 1,
     name: "Darmstadtium",
     category: "transitionMetal",
     title: "Transition Metal",
@@ -1106,6 +1215,7 @@ export const ELEMENTS = [
   {
     number: 111,
     symbol: "Rg",
+    period: 1,
     name: "Roentgenium",
     category: "transitionMetal",
     title: "Transition Metal",
@@ -1118,6 +1228,7 @@ export const ELEMENTS = [
   {
     number: 112,
     symbol: "Cn",
+    period: 1,
     name: "Copernicium",
     category: "transitionMetal",
     title: "Transition Metal",
@@ -1130,6 +1241,7 @@ export const ELEMENTS = [
   {
     number: 113,
     symbol: "Nh",
+    period: 1,
     name: "Nihonium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
@@ -1142,6 +1254,7 @@ export const ELEMENTS = [
   {
     number: 114,
     symbol: "Fl",
+    period: 1,
     name: "Flerovium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
@@ -1154,6 +1267,7 @@ export const ELEMENTS = [
   {
     number: 115,
     symbol: "Mc",
+    period: 1,
     name: "Moscovium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
@@ -1166,6 +1280,7 @@ export const ELEMENTS = [
   {
     number: 116,
     symbol: "Lv",
+    period: 1,
     name: "Livermorium",
     category: "postTransitionMetal",
     title: "Post Transition Metal",
@@ -1178,6 +1293,7 @@ export const ELEMENTS = [
   {
     number: 117,
     symbol: "Ts",
+    period: 1,
     name: "Tennessine",
     category: "halogen",
     title: "Halogen",
@@ -1190,6 +1306,7 @@ export const ELEMENTS = [
   {
     number: 118,
     symbol: "Og",
+    period: 1,
     name: "Oganesson",
     category: "nobleGas",
     title: "Noble Gas",
@@ -1202,6 +1319,7 @@ export const ELEMENTS = [
   {
     number: 57,
     symbol: "La",
+    period: 1,
     name: "Lanthanum",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1214,6 +1332,7 @@ export const ELEMENTS = [
   {
     number: 58,
     symbol: "Ce",
+    period: 1,
     name: "Cerium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1226,6 +1345,7 @@ export const ELEMENTS = [
   {
     number: 59,
     symbol: "Pr",
+    period: 1,
     name: "Praseodymium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1238,6 +1358,7 @@ export const ELEMENTS = [
   {
     number: 60,
     symbol: "Nd",
+    period: 1,
     name: "Neodymium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1250,6 +1371,7 @@ export const ELEMENTS = [
   {
     number: 61,
     symbol: "Pm",
+    period: 1,
     name: "Promethium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1262,6 +1384,7 @@ export const ELEMENTS = [
   {
     number: 62,
     symbol: "Sm",
+    period: 1,
     name: "Samarium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1274,6 +1397,7 @@ export const ELEMENTS = [
   {
     number: 63,
     symbol: "Eu",
+    period: 1,
     name: "Europium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1286,6 +1410,7 @@ export const ELEMENTS = [
   {
     number: 64,
     symbol: "Gd",
+    period: 1,
     name: "Gadolinium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1298,6 +1423,7 @@ export const ELEMENTS = [
   {
     number: 65,
     symbol: "Tb",
+    period: 1,
     name: "Terbium",
     category: "lanthanide",
     title: "Lanthanide",
@@ -1310,126 +1436,147 @@ export const ELEMENTS = [
   {
     number: 66,
     symbol: "Dy",
+    period: 1,
     name: "Dyprosium",
     category: "lanthanide"
   },
   {
     number: 67,
     symbol: "Ho",
+    period: 1,
     name: "Holmium",
     category: "lanthanide"
   },
   {
     number: 68,
     symbol: "Er",
+    period: 1,
     name: "Erbium",
     category: "lanthanide"
   },
   {
     number: 69,
     symbol: "Tm",
+    period: 1,
     name: "Thulium",
     category: "lanthanide"
   },
   {
     number: 70,
     symbol: "Yb",
+    period: 1,
     name: "Ytterbium",
     category: "lanthanide"
   },
   {
     number: 71,
     symbol: "Lu",
+    period: 1,
     name: "Lutetium",
     category: "lanthanide"
   },
   {
     number: 89,
     symbol: "Ac",
+    period: 1,
     name: "Actinium",
     category: "actinide"
   },
   {
     number: 90,
     symbol: "Th",
+    period: 1,
     name: "Thorium",
     category: "actinide"
   },
   {
     number: 91,
     symbol: "Pa",
+    period: 1,
     name: "Protactinium",
     category: "actinide"
   },
   {
     number: 92,
     symbol: "U",
+    period: 1,
     name: "Uranium",
     category: "actinide"
   },
   {
     number: 93,
     symbol: "Np",
+    period: 1,
     name: "Neptunium",
     category: "actinide"
   },
   {
     number: 94,
     symbol: "Pu",
+    period: 1,
     name: "Plutonium",
     category: "actinide"
   },
   {
     number: 95,
     symbol: "Am",
+    period: 1,
     name: "Americium",
     category: "actinide"
   },
   {
     number: 96,
     symbol: "Cm",
+    period: 1,
     name: "Curium",
     category: "actinide"
   },
   {
     number: 97,
     symbol: "Bk",
+    period: 1,
     name: "Berkelium",
     category: "actinide"
   },
   {
     number: 98,
     symbol: "Cf",
+    period: 1,
     name: "Californium",
     category: "actinide"
   },
   {
     number: 99,
     symbol: "Es",
+    period: 1,
     name: "Einsteinium",
     category: "actinide"
   },
   {
     number: 100,
     symbol: "Fm",
+    period: 1,
     name: "Fermium",
     category: "actinide"
   },
   {
     number: 101,
     symbol: "Md",
+    period: 1,
     name: "Mendelevium",
     category: "actinide"
   },
   {
     number: 102,
     symbol: "No",
+    period: 1,
     name: "Nobelium",
     category: "actinide"
   },
   {
     number: 103,
     symbol: "Lr",
+    period: 1,
     name: "Lawrencium",
     category: "actinide"
   }
